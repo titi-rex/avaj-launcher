@@ -2,6 +2,12 @@ package avaj_launcher;
 
 import java.util.LinkedList;
 import java.util.List;
+
+import avaj_launcher.flyable.AircraftFactory;
+import avaj_launcher.flyable.Flyable;
+import avaj_launcher.weather.WeatherProvider;
+import avaj_launcher.weather.WeatherTower;
+
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.LineNumberReader;
@@ -20,6 +26,8 @@ public class Simulator {
 
 
     public static void main(String ...args) {
+        System.out.println("Hello.");
+
 
         if (args.length != 1) {
             System.out.println("Usage: ...");

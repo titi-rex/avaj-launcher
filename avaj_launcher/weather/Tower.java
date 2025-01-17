@@ -1,7 +1,9 @@
-package avaj_launcher;
+package avaj_launcher.weather;
 
 import java.util.LinkedList;
 import java.util.List;
+
+import avaj_launcher.flyable.Flyable;
 
 public class Tower {
 

@@ -1,4 +1,6 @@
-package avaj_launcher;
+package avaj_launcher.weather;
+
+import avaj_launcher.Coordinates;
 
 /**
  * signleton

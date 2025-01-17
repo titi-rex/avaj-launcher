@@ -1,30 +1,33 @@
-package avaj_launcher;
+package avaj_launcher.flyable;
 
-public class JetPlane extends Aircraft {
+import avaj_launcher.Coordinates;
 
-    public JetPlane(long p_id, String p_name, Coordinates p_coordinates) {
+public class Helicopter extends Aircraft {
+
+    public Helicopter(long p_id, String p_name, Coordinates p_coordinates) {
         super(p_id, p_name, p_coordinates);
     }
 
+
     protected void sun() {
         say("Rise and shine. RISE AND SHINE!!!");
-        coordinates.increaseLatitude(10);
+        coordinates.increaseLongitude(10);
         coordinates.increaseHeight(2);
     }
 
     protected void rain() {
         say("Il pleut, il mouille, je me noie!");
-        coordinates.increaseLatitude(5);
+        coordinates.increaseLongitude(5);
     }
 
     protected void fog() {
         say("J'y vois plus rien..");
-        coordinates.increaseLatitude(1);
+        coordinates.increaseLongitude(1);
     }
 
     protected void snow() {
         say("ATCHOUM!.. glglglgl...");
-        coordinates.increaseHeight(-7);
+        coordinates.increaseHeight(-12);
     }
-}
 
+}

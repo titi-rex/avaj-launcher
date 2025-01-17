@@ -1,4 +1,6 @@
-package avaj_launcher;
+package avaj_launcher.flyable;
+
+import avaj_launcher.Coordinates;
 
 public class Aircraft extends Flyable {
     protected long          id;
