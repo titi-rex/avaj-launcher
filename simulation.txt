@@ -1,0 +1,21 @@
+Tower say: Baloon#B1(1) registered to weather tower.
+Tower say: Baloon#B2(2) registered to weather tower.
+Tower say: JetPlane#J1(3) registered to weather tower.
+Tower say: Helicopter#H1(4) registered to weather tower.
+Tower say: Helicopter#H2(5) registered to weather tower.
+Tower say: Helicopter#H3(6) registered to weather tower.
+Tower say: Baloon#B3(7) registered to weather tower.
+Tower say: JetPlane#J2(8) registered to weather tower.
+Tower say: Helicopter#H4(9) registered to weather tower.
+Baloon#B1(1): ATCHOUM!.. glglglgl...
+Baloon#B2(2): J'y vois plus rien..
+JetPlane#J1(3): Il pleut, il mouille, je me noie!
+Helicopter#H1(4): Il pleut, il mouille, je me noie!
+Helicopter#H2(5): Il pleut, il mouille, je me noie!
+Helicopter#H3(6): J'y vois plus rien..
+Baloon#B3(7): Il pleut, il mouille, je me noie!
+JetPlane#J2(8): J'y vois plus rien..
+Helicopter#H4(9): Il pleut, il mouille, je me noie!
+Baloon#B1(1): ATCHOUM!.. glglglgl...
+Baloon#B1(1) landing.
+Tower say: Baloon#B1(1) unregistered from weather tower.

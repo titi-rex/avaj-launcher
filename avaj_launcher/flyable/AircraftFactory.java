@@ -1,6 +1,7 @@
 package avaj_launcher.flyable;
 
 import avaj_launcher.Coordinates;
+import avaj_launcher.exceptions.InvalidAircraftTypeException;
 
 public class AircraftFactory {
 
@@ -16,12 +17,12 @@ public class AircraftFactory {
     }
 
 
-    public Flyable newAircraft(String p_type, String p_name, Coordinates p_coordinates) {
+    public Flyable newAircraft(String p_type, String p_name, Coordinates p_coordinates) throws InvalidAircraftTypeException {
         nAircraft++;
 
         switch (p_type) {
             default:
-                System.out.println("WARNING: no aircraft type requested, default to JetPlane");
+                throw new InvalidAircraftTypeException(p_type);
             case "JetPlane":
                 return new JetPlane(nAircraft, p_name, p_coordinates);
             case "Helicopter":

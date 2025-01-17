@@ -17,6 +17,9 @@ public class Aircraft extends Flyable {
     public void updateConditions() {
         String weather = weatherTower.getWeather(coordinates);
         switch (weather) {
+            default:
+                this.def();
+                break;
             case "SUN":
                 this.sun();
                 break;
@@ -29,9 +32,6 @@ public class Aircraft extends Flyable {
             case "SNOW":
                 this.snow();
                 break;
-            default:
-                System.out.println("ERROR: no weather for " + this.toString());
-                break;
         }
 
         if (coordinates.getHeight() > 100) {
@@ -42,7 +42,9 @@ public class Aircraft extends Flyable {
         }
     }
 
-    protected void sun() {say("sun"); }
+    protected void def() { say("i'm lost"); }
+
+    protected void sun() { say("sun"); }
 
     protected void rain() { say("rain"); }
 

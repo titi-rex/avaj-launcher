@@ -1,5 +1,7 @@
 package avaj_launcher.weather;
 
+import java.util.Random;
+
 import avaj_launcher.Coordinates;
 
 /**
@@ -24,9 +26,8 @@ public class WeatherProvider {
      * @return
      */
     public String getCurrentWeather(Coordinates p_coordinates) {
-        int i = (p_coordinates.sum() + 13) % 4;
+        int i = (new Random().nextInt(weather.length) + p_coordinates.sum()) % 4;
         return weather[i];
     }
-
 
 }
