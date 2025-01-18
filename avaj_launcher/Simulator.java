@@ -27,6 +27,7 @@ public class Simulator {
     private static PrintStream     console = System.out;
 
 
+    
     public static void main(String ...args) {
         System.out.println("Hello.");
 
@@ -57,6 +58,7 @@ public class Simulator {
         }
     }
 
+    
     private Simulator(String scenario) throws EmptyFileException, ParsingException, InvalidAircraftTypeException, IOException {
         int lineNumber = 1;
         try (LineNumberReader reader = new LineNumberReader(new FileReader(scenario))) {
