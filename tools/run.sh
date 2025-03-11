@@ -1,3 +1,3 @@
 #!/bin/bash
 
-java avaj_launcher.Simulator "$1"
+java avaj_launcher.Simulator $1
