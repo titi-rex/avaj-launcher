@@ -1,4 +1,5 @@
 *.class
 sources.txt
-simulation.txtdoc/
+simulation.txt
+doc/
 docs/
