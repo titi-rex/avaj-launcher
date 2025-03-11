@@ -5,6 +5,7 @@ import java.util.List;
 
 import avaj_launcher.exceptions.EmptyFileException;
 import avaj_launcher.exceptions.InvalidAircraftTypeException;
+import avaj_launcher.exceptions.InvalidNumberException;
 import avaj_launcher.exceptions.ParsingException;
 import avaj_launcher.flyable.AircraftFactory;
 import avaj_launcher.flyable.Flyable;
@@ -55,14 +56,13 @@ public class Simulator {
     }
   }
 
-  private Simulator(String scenario)
-      throws EmptyFileException, ParsingException, InvalidAircraftTypeException, IOException {
+  private Simulator(String scenario) throws EmptyFileException, ParsingException, InvalidAircraftTypeException, IOException {
     int lineNumber = 1;
     try (LineNumberReader reader = new LineNumberReader(new FileReader(scenario))) {
       String line = reader.readLine();
       if (line == null)
         throw new EmptyFileException();
-      numChange = Integer.parseInt(line);
+      numChange = Integer.parseUnsignedInt(line);
 
       while ((line = reader.readLine()) != null) {
         lineNumber++;
@@ -80,10 +80,10 @@ public class Simulator {
                     Integer.parseInt(words[4]))));
       }
     } catch (NumberFormatException e) {
-      throw new ParsingException("invalid number format at line: " + lineNumber, lineNumber);
+      throw new ParsingException("invalid number format (" + e.getMessage() + ") at line: " + lineNumber, lineNumber);
     } catch (IndexOutOfBoundsException e) {
       throw new ParsingException("missing parameter at line: " + lineNumber, lineNumber);
-    } catch (InvalidAircraftTypeException e) {
+    } catch (InvalidAircraftTypeException | InvalidNumberException e) {
       throw new ParsingException(e.getMessage() + ", at line: " + lineNumber, lineNumber);
     }
   }
