@@ -26,7 +26,7 @@ public class WeatherProvider {
      * @return weather generated
      */
     public String getCurrentWeather(Coordinates p_coordinates) {
-        int i = (new Random().nextInt(weather.length) + p_coordinates.sum()) % 4;
+        int i = (new Random().nextInt(weather.length) + p_coordinates.sum()) % weather.length;
         return weather[i];
     }
 
