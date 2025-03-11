@@ -5,7 +5,7 @@ import java.util.Random;
 import avaj_launcher.Coordinates;
 
 /**
- * signleton
+ * singleton
  */
 public class WeatherProvider {
 
@@ -23,7 +23,7 @@ public class WeatherProvider {
     /**
      * generate weather based on coordinate
      * @param p_coordinates
-     * @return
+     * @return weather generated
      */
     public String getCurrentWeather(Coordinates p_coordinates) {
         int i = (new Random().nextInt(weather.length) + p_coordinates.sum()) % 4;
